@@ -23,4 +23,5 @@ This project was created as a learning project to understand how a full to-do ap
 3. Open the app in your browser
 
 ## Author
-Ayisha
+Ayisha Faheema
+ayishafaheema@gmail.com
