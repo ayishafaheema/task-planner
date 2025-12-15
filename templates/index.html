@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>To_do_list app</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Task planner</h1>
+        <p>Plan,Track and Complete your work</p>
+        <button class="add-btn" type="button">+    Add task</button>
+        
+        <button class="signout-btn" onclick="window.location.href='/signout'">
+            Sign out</button>
+
+    </div>
+
+    <div id="task-container"></div>
+    
+    <div id="empty-state" class="empty-container">
+        <h3>No task yet</h3>
+        <p>Add task to get started </p>
+    </div>
+
+    
+    <div id="popup-overlay" class="popup-overlay" style="display:none;">
+            <div class="popup-box">
+                <h3 class="popup-title">Ooops!</h3>
+                <p id="popup-message" class="popup-message">Error saving Task</p>
+                <button class="popup-btn" onclick="closePopup()">OK</button>
+            </div>
+        </div>  
+
+
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>    
+    
+
+</body>
+</html>

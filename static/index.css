@@ -1,0 +1,299 @@
+body{
+    background: linear-gradient(
+        rgb(246, 201, 209),
+        rgb(248, 246, 246)    );
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+.header h1{
+    font-size: 2rem;
+    color:rgb(77, 48, 7);
+}
+.header p{
+    color: rgb(77, 48, 7);
+    margin-top: 2px;
+}
+
+.empty-container{
+    width: 50%;
+    max-width: 200px;
+
+    margin: 40px auto;
+    margin-top: 300px;
+    padding: 20px;
+    border-radius: 14px;
+    background-color: rgb(251, 206, 214);
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+.signout-btn{
+    background: pink;
+    border:none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.signout-btn:hover{
+    background: white;
+}
+    
+
+.add-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    background-color: rgb(240, 158, 171);
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.popup-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.popup-box{
+    background: linear-gradient(
+        135deg,
+        rgb(255, 210, 220),
+        rgb(255, 235, 240),
+        rgb(255, 245, 248)
+    );
+    padding: 24px 28px;
+    border-radius: 16px;
+    text-align: center;
+    width: 280px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+}
+
+.popup-title {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: rgb(120, 40, 70);
+}
+
+.popup-message {
+    font-size: 14px;
+    color: rgb(90, 40, 55);
+    margin-bottom: 18px;
+}
+
+.popup-btn {
+    background: rgb(240, 158, 171);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.popup-btn:hover {
+    background: rgb(225, 120, 140);
+}
+
+
+
+
+/*.popup-box {
+    background: #ffe4ec;
+    padding: 24px 28px;
+    border-radius: 14px;
+    text-align: center;
+    max-width: 300px;
+    width: 80%;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}*/
+
+
+.box{
+    background-color: rgb(247, 247, 156);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 180px;
+    height: 180px;
+    margin-left: 25px;
+}
+.box h2{
+    color: rgb(77, 48, 7);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 23px;
+    
+}
+label{
+    display: block;
+    font-size: 15px;
+    color: rgb(77, 48, 7);
+    margin-top: 10px;
+}
+input [type="date"]
+select{
+    width: 100;
+    padding: 8px;
+    border-radius: 10px;
+
+}
+input [type="date"]:hover,
+select:hover{
+    box-shadow: 0 0 5px ;
+}
+.task-box{
+    width: 230px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.task-box input,
+.task-box select {
+
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+} 
+.task-box input,
+.task-box select {
+    padding: 6px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.task-box select option[value="high"] {
+    background: #ffcccc;
+}
+.task-box select option[value="medium"] {
+    background: #fff3cd;
+}
+.task-box select option[value="low"] {
+    background: #d4edda;
+}
+.task-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    transition: 0.2s ease;
+}
+#task-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 boxes per row */
+    gap: 20px; /* space between boxes */
+    padding: 20px;
+}
+
+
+
+.task-box .save-button {
+    background-color: inherit;       /* same as box */
+    color: #333;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 8px;
+    border: 1px solid rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.task-box .save-button:hover {
+    filter: brightness(0.95);
+}
+
+
+.task-box .save-btn {
+    background-color: rgba(0,0,0,0.15);
+    color: #333;
+    border-radius: 10px;
+    padding: 8px;
+    border: none;
+    cursor: default;
+}
+
+.small-btn {
+    display: flex;
+    justify-content:center;
+    gap: 8px;
+}
+
+
+.task-box .edit-btn {
+    background-color: inherit;
+    filter: brightness(0.9);
+    color: #333;
+    border-radius: 8px;
+    padding: 6px 12px;
+    border: 1px solid rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.task-box .edit-btn:hover {
+    filter: brightness(0.85);
+}
+
+
+.task-box .delete-btn {
+    background-color: inherit;
+    filter: brightness(0.75);
+    color: #333;
+    border-radius: 8px;
+    padding: 6px 12px;
+    border: 1px solid rgba(0,0,0,0.35);
+    cursor: pointer;
+}
+
+.task-box .delete-btn:hover {
+    background-color: rgb(102, 102, 102);
+    color: #fff;
+    filter: none;
+
+}
+
+
+

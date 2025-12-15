@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>sign In page</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='signin.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h2>sign In</h2>
+
+            <form id="signin-form" action="{{url_for('auth.signin')}}" method="post">
+                <label for="email">E-mail</label>
+                <input type="email" id="signin-email" name="email" placeholder="enter your email" required>
+
+                <label for="password">password</label>
+                <input type="password" id="signin-password" name="password" placeholder="enter your password" required>
+
+                <button type="submit">Sign In</button>
+    
+            </form> 
+        </div>
+    </body>
+</html>
+
+    </body>
+</html>
